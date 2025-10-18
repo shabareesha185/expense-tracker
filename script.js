@@ -86,3 +86,4 @@ document.addEventListener("DOMContentLoaded", function () {
     localStorage.setItem("expenses", JSON.stringify(expenses));
   }
 });
+
