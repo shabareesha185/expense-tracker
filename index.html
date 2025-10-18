@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>Expense Traker</title>
+  </head>
+  <body>
+    <div class="min-h-screen bg-slate-600 flex justify-center items-center">
+      <div class="mx-auto min-w-sm rounded-md border-2 text-white">
+        <div class="w-full bg-slate-600 text-center p-2 rounded-t-md">
+          <p>Track All Your Expenses Here</p>
+        </div>
+        <div class="bg-slate-800 p-4 rounded-b-md">
+          <form action="">
+            <div class="my-2">
+              <label for=""> Expense Name: </label>
+              <input
+                id="input-expense"
+                type="text"
+                placeholder="Ex: Gym Membership"
+                class="my-1 w-full rounded-md border px-2 py-1 focus:outline-0"
+                required
+              />
+            </div>
+            <div class="my-2">
+              <label for=""> Enter Amount (Rs): </label>
+              <input
+                id="input-amount"
+                type="number"
+                placeholder="Ex: 1999"
+                class="my-1 w-full rounded-md border px-2 py-1 focus:outline-0"
+                required
+              />
+            </div>
+            <div class="flex gap-2 justify-end">
+              <button
+                type="submit"
+                class="text-sm px-2 py-1 bg-green-500 hover:bg-green-600 rounded-md"
+              >
+                Add Expense
+              </button>
+              <button
+                class="text-sm px-2 py-1 bg-red-500 hover:bg-red-600 rounded-md"
+              >
+                Clear Expense
+              </button>
+            </div>
+          </form>
+
+          <div class="my-4">
+            <p class="text-center bg-slate-600 py-2 rounded-md my-2">
+              Expense History
+            </p>
+            <p class="text-center">No Expense History To Display.</p>
+            <div>
+              <ul class="hidden">
+                <li
+                  class="flex justify-between items-center my-1 border rounded-sm py-2 px-4"
+                >
+                  <p>Travel - ₹499</p>
+                  <button
+                    class="text-sm px-3 py-1 bg-red-500 hover:bg-red-600 rounded-md"
+                  >
+                    Delete
+                  </button>
+                </li>
+              </ul>
+            </div>
+            <div class="flex flex-col items-end my-2 hidden">
+              <p class="text-center pr-2">Total: ₹499</p>
+              <button
+                class="text-sm px-2 py-1 bg-red-500 hover:bg-red-600 rounded-md"
+              >
+                Clear History
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
