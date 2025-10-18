@@ -15,7 +15,7 @@
           <p>Track All Your Expenses Here</p>
         </div>
         <div class="bg-slate-800 p-4 rounded-b-md">
-          <form action="">
+          <form action="" id="input-form">
             <div class="my-2">
               <label for=""> Expense Name: </label>
               <input
@@ -43,11 +43,6 @@
               >
                 Add Expense
               </button>
-              <button
-                class="text-sm px-2 py-1 bg-red-500 hover:bg-red-600 rounded-md"
-              >
-                Clear Expense
-              </button>
             </div>
           </form>
 
@@ -55,10 +50,10 @@
             <p class="text-center bg-slate-600 py-2 rounded-md my-2">
               Expense History
             </p>
-            <p class="text-center">No Expense History To Display.</p>
+            <p id="no-expenses-display" class="text-center">No Expense History To Display.</p>
             <div>
-              <ul class="hidden">
-                <li
+              <ul id="expenses-list" class="hidden">
+                <!-- <li
                   class="flex justify-between items-center my-1 border rounded-sm py-2 px-4"
                 >
                   <p>Travel - ₹499</p>
@@ -67,11 +62,11 @@
                   >
                     Delete
                   </button>
-                </li>
+                </li> -->
               </ul>
             </div>
-            <div class="flex flex-col items-end my-2 hidden">
-              <p class="text-center pr-2">Total: ₹499</p>
+            <div id="total-amout" class="flex flex-col items-end my-2 hidden">
+              <p class="text-center pr-2"></p>
               <button
                 class="text-sm px-2 py-1 bg-red-500 hover:bg-red-600 rounded-md"
               >
